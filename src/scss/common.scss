@@ -6,7 +6,7 @@
 
 .header {
   &-logo {
-    max-width: 150px;
+    max-width: 90px;
     width: 100%;
   }
 }
@@ -36,7 +36,7 @@
     overflow: hidden;
 
     @media (max-width: 500px) {
-      padding: 60px 5px;
+      padding: 0 5px;
     }
   }
 
@@ -614,10 +614,32 @@
 }
 
 .navbar {
+  position: relative;
+  border-bottom: 1px solid #ededed;
+
   &-menu {
     background-color: transparent;
     border: none;
     outline: none;
+    @media (max-width: 991px) {
+      position: absolute;
+      right: 50px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  #navbarNav {
+    @media (max-width: 991px) {
+      position: absolute;
+      top: 100%;
+      z-index: 5;
+      border-top: 1px solid #ededed;
+      border-bottom: 1px solid #ededed;
+      background-color: #FFFFFF;
+      width: 100%;
+      padding: 30px 10px;
+    }
   }
 
   &-brand {
