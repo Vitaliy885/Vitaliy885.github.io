@@ -6,8 +6,12 @@
 
 .header {
   &-logo {
-    max-width: 90px;
-    width: 100%;
+    height: 50px;
+    @media (max-width: 991px) {
+      position: relative;
+      left: 50px;
+      transform: scale(1.6);
+    }
   }
 }
 
@@ -18,10 +22,11 @@
 
   .container {
     max-width: 1200px;
+    padding: 20px 0;
   }
 
   &-section {
-    height: 900px;
+    height: 700px;
     background-color: #FFFFFF;
 
     @media (max-width: 500px) {
@@ -410,6 +415,7 @@
     }
 
     .card {
+      position: relative;
       box-shadow: none;
       border-radius: 0;
       border: none;
@@ -638,6 +644,7 @@
       border-bottom: 1px solid #ededed;
       background-color: #FFFFFF;
       width: 100%;
+      justify-content: flex-start !important;
       padding: 30px 10px;
     }
   }
@@ -817,5 +824,30 @@
 
   &.active {
     display: block;
+  }
+}
+
+.card {
+  &-price {
+    position: absolute;
+    background-color: #FFFFFF;
+    border: 1px solid #ededed;
+    padding: 10px;
+    min-width: 130px;
+    text-align: center;
+
+    .price-main {
+      font-weight: 600;
+      font-size: 16px;
+
+      &.discount {
+        color: #f84147;
+      }
+    }
+
+    .price-old {
+      text-decoration: line-through;
+      font-size: 14px;
+    }
   }
 }
