@@ -57,4 +57,14 @@
         setInterval(print_text(text, result, 100), 2000);
     });
 
+    let toTop = document.querySelector('.to-top');
+
+    window.addEventListener('scroll', function () {
+        if (window.pageYOffset >= 1000) {
+            toTop.classList.add('active');
+        } else {
+            toTop.classList.remove('active');
+        }
+    });
+
 })();
