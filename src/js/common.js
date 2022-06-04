@@ -57,7 +57,8 @@
         setInterval(print_text(text, result, 100), 2000);
     });
 
-    let toTop = document.querySelector('.to-top');
+    let toTop = document.querySelector('.to-top'),
+        showMore = document.querySelectorAll('.show-more');
 
     window.addEventListener('scroll', function () {
         if (window.pageYOffset >= 1000) {
@@ -65,6 +66,12 @@
         } else {
             toTop.classList.remove('active');
         }
+    });
+
+    showMore.forEach(item => {
+        item.addEventListener('click', () => {
+            document.querySelector(`.show-more-content.${item.getAttribute('data-info')}`).classList.add('active');
+        });
     });
 
 })();
