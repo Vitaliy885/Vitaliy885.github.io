@@ -58,7 +58,11 @@
     });
 
     let toTop = document.querySelector('.to-top'),
-        showMore = document.querySelectorAll('.show-more');
+        showMore = document.querySelectorAll('.show-more'),
+        callOrder = document.querySelectorAll('.call-order'),
+        orderWrapper = document.querySelector('.order__wrapper'),
+        orderClose = document.querySelector('.order-close'),
+        showMoreClose = document.querySelectorAll('.show-more-close');
 
     window.addEventListener('scroll', function () {
         if (window.pageYOffset >= 1000) {
@@ -71,6 +75,24 @@
     showMore.forEach(item => {
         item.addEventListener('click', () => {
             document.querySelector(`.show-more-content.${item.getAttribute('data-info')}`).classList.add('active');
+        });
+    });
+
+    callOrder.forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            orderWrapper.classList.add('active');
+            item.parentElement.parentElement.parentElement.parentElement.parentElement.classList.remove('active');
+        });
+    });
+
+    orderClose.addEventListener('click', () => {
+        orderClose.parentElement.classList.remove('active');
+    });
+
+    showMoreClose.forEach(item => {
+        item.addEventListener('click', () => {
+            item.parentElement.classList.remove('active');
         });
     });
 

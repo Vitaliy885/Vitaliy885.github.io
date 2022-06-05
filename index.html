@@ -60,7 +60,7 @@
                 <h1 class="typing-text"></h1>
                 <p>У нашому пристрої НЕМАЄ тютюну, НЕМАЄ НІКОТИНУ, НЕМАЄ ДІАЦЕТИЛУ, НЕМАЄ ГЛЮТЕНА АБО ЦУКОРА</p>
                 <p><a class="caption-send"
-                      href="https://api.whatsapp.com/message/SW73WX3D2BSIE1?autoload=1&app_absent=0">Замовити</a></p>
+                      href="#catalog">Замовити</a></p>
                 <img src="dist/images/Nutriair_Focus.jpg" class="main-caption-image" alt="Nutriair Focus">
             </div>
         </div>
@@ -345,6 +345,7 @@
 
 <div class="show-more-list">
     <div class="show-more-content sleep">
+        <div class="show-more-close"></div>
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -361,7 +362,7 @@
                                 <span class="price-old">380 грн</span>
                             </div>
                         </div>
-                        <a class="card-link" target="_blank"
+                        <a class="card-link call-order" target="_blank"
                            href="https://api.whatsapp.com/message/SW73WX3D2BSIE1?autoload=1&app_absent=0">Замовити</a>
                         <div class="product-description"> Інгалятор з мелатоніном для глибокого,
                             високоякісного сну та повного відпочинку. Сприяє міцному сну, виступає як потужний
@@ -382,9 +383,15 @@
     </div>
 </div>
 
-<div class="close__video"></div>
-<video class="modal-video" src="dist/video/show.mp4" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;"
-       controls="controls" autoplay=""></video>
+<div class="order__wrapper">
+    <div class="order-close"></div>
+    <form action="#" class="order__form">
+        <input type="text" class="input__field" required placeholder="Ім'я">
+        <input type="text" value="+380("  class="input__field format__number" required placeholder="Телефон">
+        <button class="submit__order">Замовити</button>
+    </form>
+</div>
+
 <div class="overlay"></div>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
@@ -394,5 +401,6 @@
         crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/siema@1.5.1/dist/siema.min.js"></script>
 <script src="dist/js/common.js"></script>
+<script src="dist/js/format-phone.js"></script>
 </body>
 </html>
