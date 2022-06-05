@@ -57,6 +57,10 @@
         margin-right: auto;
         margin-top: 50px;
 
+        @media (max-width: 991px) {
+          margin-top: 0;
+        }
+
         .answer-item {
 
           .answer-title {
@@ -151,12 +155,18 @@
       position: relative;
       z-index: 2;
 
+      @media (max-width: 991px) {
+        padding: 25px 0;
+      }
+
       h2 {
         font-size: 37px;
         font-weight: 700;
 
-        @media (max-width: 500px) {
+        @media (max-width: 991px) {
           font-size: 25px;
+          padding: 0 5px;
+          text-align: center;
         }
       }
 
@@ -208,8 +218,9 @@
     &-title {
       font-size: 37px;
       color: #000000;
-      @media (max-width: 500px) {
+      @media (max-width: 991px) {
         font-size: 25px;
+        padding: 0 10px;
       }
     }
 
@@ -422,6 +433,10 @@
     overflow: hidden;
     background-color: #ffffff;
 
+    @media (max-width: 991px) {
+      padding: 40px 10px;
+    }
+
     @media (max-width: 767px) {
       .col-md-4 {
         margin-bottom: 30px;
@@ -491,7 +506,7 @@
         position: relative;
         z-index: 2;
 
-        @media (max-width: 500px) {
+        @media (max-width: 991px) {
           font-size: 25px;
         }
       }
@@ -558,8 +573,8 @@
 
   &-footer {
     padding: 100px 0;
-    @media (max-width: 425px) {
-      padding: 80px 0;
+    @media (max-width: 991px) {
+      padding: 40px 0;
     }
 
     &-item {
@@ -569,9 +584,13 @@
     }
 
     .logo-footer {
-      @media (max-width: 425px) {
+      @media (max-width: 991px) {
         width: 100% !important;
         justify-content: center;
+
+        .header-logo {
+          left: 0;
+        }
       }
     }
 
