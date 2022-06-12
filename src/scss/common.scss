@@ -304,7 +304,7 @@
         margin: 0;
       }
 
-      @media (max-width: 500px) {
+      @media (max-width: 991px) {
         min-height: 300px;
         margin: 20px 14px;
       }
@@ -555,10 +555,8 @@
             left: -20px;
             top: -21px;
             z-index: 1;
-            @media (max-width: 500px) {
-              width: 117%;
-              transform: rotate(12deg);
-
+            @media (max-width: 991px) {
+              display: none;
             }
           }
         }
@@ -963,6 +961,10 @@
     z-index: 9999999;
     background-color: rgba(#fff, 0.9);
     display: none;
+
+    @media (max-width: 991px) {
+      overflow-x: hidden;
+    }
 
     img {
       width: 100%;
