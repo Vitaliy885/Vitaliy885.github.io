@@ -867,6 +867,12 @@
       }
     }
   }
+
+  @media (max-width: 991px) {
+    img {
+      height: auto;
+    }
+  }
 }
 
 .show-more {
