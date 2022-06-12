@@ -871,6 +871,8 @@
   @media (max-width: 991px) {
     img {
       object-fit: contain;
+      height: 100%;
+      width: 100%;
     }
   }
 }
