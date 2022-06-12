@@ -264,10 +264,6 @@
         &:hover {
           opacity: 1;
         }
-
-        @media (max-width: 1280px) {
-          display: none;
-        }
       }
 
       .prev {
@@ -913,6 +909,13 @@
     height: 50px;
     width: 50px;
 
+    @media (max-width: 991px) {
+      z-index: 20;
+      background-color: #FFFFFF;
+      height: 40px;
+      width: 40px;
+    }
+
     &::after,
     &::before {
       content: ' ';
@@ -959,14 +962,22 @@
 
     .container {
       position: relative;
-      top: 50%;
-      transform: translateY(-50%);
+      @media (min-width: 992px) {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      @media (max-width: 991px) {
+        padding: 10px;
+      }
     }
 
     .product {
       &-name {
         font-weight: 700;
         font-size: 22px;
+        @media (max-width: 991px) {
+          margin-top: 10px;
+        }
       }
 
       &-description {
