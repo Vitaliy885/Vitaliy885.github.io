@@ -870,7 +870,7 @@
 
   @media (max-width: 991px) {
     img {
-      height: fit-content;
+      object-fit: contain;
     }
   }
 }
