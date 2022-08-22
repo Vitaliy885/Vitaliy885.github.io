@@ -40,7 +40,7 @@
     });
 
     document.addEventListener('DOMContentLoaded', () => {
-        let text = 'ІНГАЛЯТОР із вітамінами Hvape',
+        let text = 'Giorgio Armani Si Parfum 100 мл тестер',
             result = document.querySelector('.typing-text');
 
         let print_text = function (text, result, delay) {
@@ -58,11 +58,11 @@
     });
 
     let toTop = document.querySelector('.to-top'),
-        showMore = document.querySelectorAll('.show-more'),
+        modal = document.querySelector('.show-more-content.sleep'),
         callOrder = document.querySelectorAll('.call-order'),
         orderWrapper = document.querySelector('.order__wrapper'),
         orderClose = document.querySelector('.order-close'),
-        showMoreClose = document.querySelectorAll('.show-more-close');
+        main = document.querySelector('body');
 
     window.addEventListener('scroll', function () {
         if (window.pageYOffset >= 1000) {
@@ -70,12 +70,6 @@
         } else {
             toTop.classList.remove('active');
         }
-    });
-
-    showMore.forEach(item => {
-        item.addEventListener('click', () => {
-            document.querySelector(`.show-more-content.${item.getAttribute('data-info')}`).classList.add('active');
-        });
     });
 
     callOrder.forEach(item => {
@@ -90,10 +84,16 @@
         orderClose.parentElement.classList.remove('active');
     });
 
-    showMoreClose.forEach(item => {
-        item.addEventListener('click', () => {
-            item.parentElement.classList.remove('active');
-        });
+    main.addEventListener('click', (e) => {
+        let target = e.target;
+
+        if (target.classList.contains('show-more')) {
+            modal.classList.add('active');
+        }
+
+        if (target.classList.contains('show-more-close')) {
+            modal.classList.remove('active');
+        }
     });
 
 })();
