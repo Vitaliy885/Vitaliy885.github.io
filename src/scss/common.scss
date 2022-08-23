@@ -79,13 +79,31 @@
 
   &-caption {
     &-image {
-      position: absolute;
-      right: 0;
-      top: 200px;
       z-index: 0;
       max-width: 550px;
       @media (max-width: 991px) {
         display: none;
+      }
+    }
+
+    &-background {
+      background-image: url('../images/blue-and-pink-halftone-background_53876-99004.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      max-width: 100% !important;
+
+      @media (max-width: 991px) {
+        padding: 50px 0 !important;
+      }
+
+      .caption {
+       padding: 0;
+        display: flex;
+        width: 100%;
+        max-width: 1200px;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
       }
     }
   }
@@ -213,7 +231,7 @@
     padding-top: 90px;
 
     @media (max-width: 500px) {
-      padding-top: 0;
+      padding-top: 50px;
     }
 
     &-title {
@@ -967,7 +985,7 @@
     box-sizing: border-box;
     cursor: pointer;
     z-index: 9999999;
-    background-color: rgba(#fff, 0.9);
+    background-color: rgba(#fff, 0.96);
     display: none;
 
     @media (max-width: 991px) {
@@ -990,12 +1008,15 @@
     }
 
     .show-more-images {
-      border: 1px solid #ededed;
+      object-fit: contain;
+      max-height: 500px;
+      height: 100%;
     }
 
     .thumbnails {
       display: flex;
       margin-top: 10px;
+      flex-wrap: wrap;
 
       .thumbnail__image {
         width: 100px;
