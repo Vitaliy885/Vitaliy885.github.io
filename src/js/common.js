@@ -1,30 +1,5 @@
 (function () {
 
-    let data = [{
-        id: 1,
-        name: 'Lanvin Marry Me edt 100 мл',
-        price: `<div class="card-price">
-                                <span class="price-main discount">260 грн</span>
-                                <span class="price-old">380 грн</span>
-                            </div>`,
-        images: [
-            {
-                image: './dist/images/510202_1_1648045399.jpg'
-            }
-        ],
-        description: `Інгалятор з мелатоніном для глибокого,
-                            високоякісного сну та повного відпочинку. Сприяє міцному сну, виступає як потужний
-                            релаксант, прискорює засипання, зменшуючи загальний рівень стресу, тривоги та нервова
-                            напруга<br><br>Рекомендується по 5 інгаляцій, перед сном.<br><br>Склад:<br>
-                            <ul>
-                                <li>Пропіленгліколь</li>
-                                <li>рослинний гліцерин</li>
-                                <li>L-теанин</li>
-                                <li>Мелатонін</li>
-                                <li>Натуральна ромашка</li>
-                            </ul>`
-    }];
-
     let mySiema = new Siema({
         selector: '.siema',
         duration: 200,
@@ -87,6 +62,7 @@
         callOrder = document.querySelectorAll('.call-order'),
         orderWrapper = document.querySelector('.order__wrapper'),
         orderClose = document.querySelector('.order-close'),
+        cartSign = document.querySelector('.cart__sign'),
         main = document.querySelector('body');
 
     window.addEventListener('scroll', function () {
@@ -109,8 +85,23 @@
         orderClose.parentElement.classList.remove('active');
     });
 
-    let displayDescription = () => {
-        console.log(data[0])
+    let displayDescription = (target) => {
+        data.map(item => {
+            if (target.getAttribute('data-attribute-id') == item.attribute_id) {
+                document.querySelector('.show-more-images').setAttribute('src', item.image);
+                document.querySelector('.show-more-content .product-name').innerHTML = item.name;
+                document.querySelector('.show-more-content .product-price').innerHTML = item.price;
+                document.querySelector('.show-more-content .product-description').innerHTML = item.description;
+            }
+        });
+    }
+
+    let addToCart = (target) => {
+        data.map(item => {
+            if (target.getAttribute('data-attribute-id') == item.attribute_id) {
+                orderWrapper.classList.add('active');
+            }
+        });
     }
 
     main.addEventListener('click', (e) => {
@@ -118,7 +109,11 @@
 
         if (target.classList.contains('show-more')) {
             modal.classList.add('active');
-            displayDescription();
+            displayDescription(target);
+        }
+
+        if (target.classList.contains('card-link')) {
+            addToCart(target);
         }
 
         if (target.classList.contains('show-more-close')) {

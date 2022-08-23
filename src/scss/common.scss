@@ -369,6 +369,7 @@
         position: relative;
         margin-top: 20px;
         width: 100%;
+        border: none;
         transition: all .2s ease-in-out;
 
         &:hover {
@@ -460,6 +461,7 @@
         height: 51px;
         position: relative;
         margin-top: 20px;
+        border: none;
         width: 100%;
         transition: all 0.2s ease-in-out;
 
@@ -1029,6 +1031,7 @@
       text-decoration: none;
       margin-top: 10px;
       height: 40px;
+      border: none;
       max-width: 200px;
       transition: all .2s ease-in-out;
 
@@ -1173,4 +1176,37 @@
     }
   }
 
+}
+
+.cart {
+  &__sign {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    z-index: 10;
+    box-shadow: 0 0 5px #ccc;
+    height: 50px;
+    width: 50px;
+    color: #FFFFFF;
+    background-color: #cd89d6;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    &-quantity {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 0 15px #ccc;
+    }
+
+    &.active {
+      display: flex;
+    }
+  }
 }
