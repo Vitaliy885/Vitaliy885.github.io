@@ -1,5 +1,30 @@
 (function () {
 
+    let data = [{
+        id: 1,
+        name: 'Lanvin Marry Me edt 100 мл',
+        price: `<div class="card-price">
+                                <span class="price-main discount">260 грн</span>
+                                <span class="price-old">380 грн</span>
+                            </div>`,
+        images: [
+            {
+                image: './dist/images/510202_1_1648045399.jpg'
+            }
+        ],
+        description: `Інгалятор з мелатоніном для глибокого,
+                            високоякісного сну та повного відпочинку. Сприяє міцному сну, виступає як потужний
+                            релаксант, прискорює засипання, зменшуючи загальний рівень стресу, тривоги та нервова
+                            напруга<br><br>Рекомендується по 5 інгаляцій, перед сном.<br><br>Склад:<br>
+                            <ul>
+                                <li>Пропіленгліколь</li>
+                                <li>рослинний гліцерин</li>
+                                <li>L-теанин</li>
+                                <li>Мелатонін</li>
+                                <li>Натуральна ромашка</li>
+                            </ul>`
+    }];
+
     let mySiema = new Siema({
         selector: '.siema',
         duration: 200,
@@ -84,11 +109,16 @@
         orderClose.parentElement.classList.remove('active');
     });
 
+    let displayDescription = () => {
+        console.log(data[0])
+    }
+
     main.addEventListener('click', (e) => {
         let target = e.target;
 
         if (target.classList.contains('show-more')) {
             modal.classList.add('active');
+            displayDescription();
         }
 
         if (target.classList.contains('show-more-close')) {
