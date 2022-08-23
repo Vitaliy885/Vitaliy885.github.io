@@ -39,6 +39,16 @@
         overlay.classList.remove('active');
     });
 
+    let thumbnailActive = () => {
+        let thumbnails = document.querySelectorAll('.thumbnail__image');
+
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('mouseover', () => {
+                document.querySelector('.show-more-images').setAttribute('src', thumbnail.getAttribute('src'));
+            });
+        });
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
         let text = 'Giorgio Armani Si Parfum 100 мл тестер',
             result = document.querySelector('.typing-text');
@@ -86,14 +96,22 @@
     });
 
     let displayDescription = (target) => {
+        document.querySelector('.show-more-content .thumbnails').innerHTML = '';
         data.map(item => {
             if (target.getAttribute('data-attribute-id') == item.attribute_id) {
                 document.querySelector('.show-more-images').setAttribute('src', item.image);
                 document.querySelector('.show-more-content .product-name').innerHTML = item.name;
                 document.querySelector('.show-more-content .product-price').innerHTML = item.price;
                 document.querySelector('.show-more-content .product-description').innerHTML = item.description;
+
+                if (item.thumbnails.length > 1) {
+                    item.thumbnails.forEach(thumbnail => {
+                        document.querySelector('.show-more-content .thumbnails').innerHTML += `<img class="thumbnail__image" src="${thumbnail}">`;
+                    });
+                }
             }
         });
+        thumbnailActive();
     }
 
     let addToCart = (target) => {

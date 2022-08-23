@@ -989,6 +989,26 @@
       }
     }
 
+    .show-more-images {
+      border: 1px solid #ededed;
+    }
+
+    .thumbnails {
+      display: flex;
+      margin-top: 10px;
+
+      .thumbnail__image {
+        width: 100px;
+        height: 100px;
+        margin: 0 5px;
+        border: 1px solid #ededed;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+
     .product {
       &-name {
         font-weight: 700;
