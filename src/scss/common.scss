@@ -51,6 +51,7 @@
   &-contact {
     &.how-order {
       padding: 40px 14px;
+
       .how-order-list {
         margin-left: auto;
         margin-right: auto;
@@ -72,27 +73,30 @@
           }
 
           .how-order-title {
-            font-size: 22px;
+            font-size: 18px;
             font-weight: 400;
             margin-top: 10px;
 
             @media (max-width: 428px) {
-              font-size: 18px;
+              font-size: 16px;
             }
           }
 
           .how-order-icon {
-            width: 100px;
-            height: 100px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
-            background-color: #dde0e3;
             margin: auto;
             display: flex;
             align-items: center;
             justify-content: center;
             @media (max-width: 428px) {
-              width: 70px;
-              height: 70px;
+              width: 40px;
+              height: 40px;
+            }
+
+            img {
+              width: 100%;
             }
           }
         }
@@ -396,6 +400,94 @@
         &-title {
           text-align: center;
           font-size: 22px;
+        }
+      }
+    }
+  }
+
+  &-about-us {
+    padding: 0 10px;
+    padding-bottom: 40px;
+    padding-top: 10px;
+    width: 100%;
+    overflow: hidden;
+
+    .caption {
+      padding-top: 30px;
+      position: relative;
+      z-index: 2;
+
+      @media (max-width: 991px) {
+        padding: 25px 0;
+      }
+
+      h2 {
+        font-size: 37px;
+        font-weight: 700;
+
+        @media (max-width: 991px) {
+          font-size: 25px;
+          padding: 0 5px;
+          text-align: center;
+        }
+      }
+
+      h3 {
+
+        margin-top: 150px;
+        font-size: 27px;
+        font-weight: 700;
+        @media (max-width: 500px) {
+          font-size: 20px;
+          margin-top: 100px;
+        }
+      }
+
+      p {
+        font-size: 22px;
+        font-weight: 400;
+        @media (max-width: 500px) {
+          font-size: 18px;
+          &.caption-phone {
+            max-width: 100%;
+
+            a {
+              width: 100%;
+            }
+          }
+        }
+
+        a {
+          font-size: 27px;
+          font-weight: 700;
+          @media (max-width: 500px) {
+            text-align: center;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    .about-us-list {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 35px;
+
+      @media (max-width: 767px) {
+        margin-top: 0;
+      }
+
+      .about-us-item {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        padding: 20px;
+
+        @media (max-width: 767px) {
+          width: 100%;
+          padding: 10px;
         }
       }
     }
@@ -827,6 +919,12 @@
       max-width: 100px;
       width: 100%;
       transition: all 0.2s ease-in-out;
+
+      @media (max-width: 991px) {
+        max-width: 70px;
+        right: 30px;
+        bottom: 30px;
+      }
 
       &.active {
         display: block;
