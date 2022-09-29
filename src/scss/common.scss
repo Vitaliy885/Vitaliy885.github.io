@@ -6,7 +6,8 @@
 
 .header {
   &-logo {
-    height: 50px;
+    height: 70px;
+    position: absolute;
     @media (max-width: 991px) {
       position: relative;
       left: 10px;
