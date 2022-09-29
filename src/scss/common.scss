@@ -22,7 +22,7 @@
 
   .container {
     max-width: 1200px;
-    padding: 20px 0;
+    padding: 40px 0;
     @media (max-width: 991px) {
       padding: 0;
     }
@@ -107,7 +107,7 @@
   &-caption {
     &-image {
       z-index: 0;
-      max-width: 550px;
+      max-width: 440px;
       @media (max-width: 991px) {
         display: none;
       }
@@ -488,6 +488,10 @@
         @media (max-width: 767px) {
           width: 100%;
           padding: 10px;
+        }
+
+        p {
+          text-indent: 20px;
         }
       }
     }

@@ -95,6 +95,14 @@
         orderClose.parentElement.classList.remove('active');
     });
 
+    document.onkeydown = function (evt) {
+        evt = evt || window.event;
+        if (evt.keyCode == 27) {
+            orderClose.parentElement.classList.remove('active');
+            modal.classList.remove('active');
+        }
+    };
+
     let displayDescription = (target) => {
         document.querySelector('.show-more-content .thumbnails').innerHTML = '';
         data.map(item => {
