@@ -49,8 +49,8 @@
         });
     }
 
-    document.addEventListener('DOMContentLoaded', () => {
-        let text = 'Giorgio Armani Si Parfum 100 мл тестер',
+ /*   document.addEventListener('DOMContentLoaded', () => {
+        let text = 'Витончений і вишуканий аромат уособлює красивих леді з бездоганним смаком.',
             result = document.querySelector('.typing-text');
 
         let print_text = function (text, result, delay) {
@@ -65,7 +65,7 @@
         }
 
         setInterval(print_text(text, result, 100), 2000);
-    });
+    });*/
 
     let toTop = document.querySelector('.to-top'),
         modal = document.querySelector('.show-more-content.sleep'),
