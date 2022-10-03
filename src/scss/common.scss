@@ -1360,6 +1360,11 @@
           align-items: center;
           justify-content: center;
 
+          @media (max-width: 767px) {
+            padding-top: 5px;
+            padding-bottom: 5px;
+          }
+
           .price-old {
             margin-left: 5px;
           }
@@ -1405,6 +1410,11 @@
     padding: 10px;
     min-width: 130px;
     text-align: center;
+
+    @media (max-width: 767px) {
+      padding-top: 5.5px;
+      padding-bottom: 5.5px;
+    }
 
     .price-main {
       font-weight: 600;
