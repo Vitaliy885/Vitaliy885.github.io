@@ -4,8 +4,8 @@ let data = [
         attribute_id: 12,
         name: 'Lanvin Eclat d`arpege 100 мл',
         price: `<div class="card-price">
-                                <span class="price-main discount">650 грн</span>
-                                <span class="price-old">1140 грн</span>
+                                <span class="price-main discount">820 грн</span>
+                                <span class="price-old">1540 грн</span>
                             </div>`,
         image: './dist/images/lanvin-eclat-darpege.jpg',
         thumbnails: ['./dist/images/lanvin-eclat-darpege.jpg', './dist/images/pic_4856256fcb3c68f_1024x3000.jpg', './dist/images/pic_b6d6293eca6e1bb_1024x3000.jpg', './dist/images/pic_75e4692a7ec75eb_1024x3000.jpg'],
@@ -19,8 +19,8 @@ let data = [
         attribute_id: 13,
         name: 'Giorgio Armani Si Parfum 100 мл',
         price: `<div class="card-price">
-                                <span class="price-main discount">710 грн</span>
-                                <span class="price-old">1180 грн</span>
+                                <span class="price-main discount">810 грн</span>
+                                <span class="price-old">1580 грн</span>
                             </div>`,
         image: './dist/images/giorgio-armani-giorgio-armani-si-3-800x800.jpg',
         thumbnails: ['./dist/images/giorgio-armani-giorgio-armani-si-3-800x800.jpg', './dist/images/giorgio-armani-si.jpg', './dist/images/giorgio-armani-safdf.jpg', './dist/images/giorgio-armani-ssdsd.jpg', './dist/images/image3.png', './dist/images/image4.png', './dist/images/image7.png'],
@@ -37,8 +37,8 @@ let data = [
         attribute_id: 14,
         name: 'Versace Bright Crystal 90 мл',
         price: `<div class="card-price">
-                                <span class="price-main discount">650 грн</span>
-                                <span class="price-old">1230 грн</span>
+                                <span class="price-main discount">950 грн</span>
+                                <span class="price-old">1730 грн</span>
                             </div>`,
         image: './dist/images/versace-bright-crystal.jpg',
         thumbnails: ['./dist/images/versace-bright-crystal.jpg', './dist/images/versace-bright-crystalll.jpg', './dist/images/versace-bright-crystalrer.jpg', './dist/images/versace-bright-crystaddd.jpg'],
@@ -50,8 +50,8 @@ let data = [
         attribute_id: 15,
         name: 'Lanvin Marry Me edt 100 мл',
         price: `<div class="card-price">
-                                <span class="price-main discount">590 грн</span>
-                                <span class="price-old">1050 грн</span>
+                                <span class="price-main discount">890 грн</span>
+                                <span class="price-old">1350 грн</span>
                             </div>`,
         image: './dist/images/5f1abaf76417f734514079.jpeg',
         thumbnails: [],
@@ -63,7 +63,7 @@ let data = [
         attribute_id: 16,
         name: 'Chloe Roses De Chloe 75 мл',
         price: `<div class="card-price">
-                                    <span class="price-main">615 грн</span>
+                                    <span class="price-main">815 грн</span>
                                 </div>`,
         image: './dist/images/chloe-roses-de-chloeww.jpg',
         thumbnails: ['./dist/images/chloe-roses-de-chloeww.jpg', './dist/images/chloe-roses-de-chlww2w.jpg', './dist/images/chloe-roses-de-chloe.jpg'],
@@ -76,8 +76,8 @@ let data = [
         attribute_id: 17,
         name: 'L`Imperatrice 3 Dolce & Gabbana 100 мл',
         price: `<div class="card-price">
-                                <span class="price-main discount">600 грн</span>
-                                <span class="price-old">900 грн</span>
+                                <span class="price-main discount">715 грн</span>
+                                <span class="price-old">1100 грн</span>
                             </div>`,
         image: './dist/images/510202_1_1648045399.jpg',
         thumbnails: ['./dist/images/510202_1_1648045399.jpg', './dist/images/pic_25d538041ab309b_1024x3000.jpg', './dist/images/pic_695b2c598dae9bf_1024x3000.png'],
