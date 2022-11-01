@@ -1478,7 +1478,8 @@
     }
   }
 
-  .order__form {
+  .order__form,
+  .order__success {
     position: absolute;
     background-color: #fff;
     z-index: 9996;
@@ -1531,6 +1532,30 @@
         box-shadow: 4px 5px 23px rgb(255 255 255 / 17%);
         cursor: pointer;
       }
+    }
+  }
+
+  .order__form {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  .order__success {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
+    &-title {
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: 600;
+      display: block;
+      padding: 30px;
     }
   }
 

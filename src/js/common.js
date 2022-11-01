@@ -26,13 +26,6 @@
         });
     });
 
-    $('.scrollTo').click(function () {
-        $('html, body').animate({
-            scrollTop: $($(this).attr('href')).offset().top - 500
-        }, 500);
-        return false;
-    });
-
     let overlay = document.querySelector('.overlay');
 
     overlay.addEventListener('click', () => {
@@ -49,23 +42,23 @@
         });
     }
 
- /*   document.addEventListener('DOMContentLoaded', () => {
-        let text = 'Витончений і вишуканий аромат уособлює красивих леді з бездоганним смаком.',
-            result = document.querySelector('.typing-text');
+    /*   document.addEventListener('DOMContentLoaded', () => {
+           let text = 'Витончений і вишуканий аромат уособлює красивих леді з бездоганним смаком.',
+               result = document.querySelector('.typing-text');
 
-        let print_text = function (text, result, delay) {
-            if (text.length > 0) {
-                result.innerHTML += text[0];
-                setTimeout(
-                    function () {
-                        print_text(text.slice(1), result, 100);
-                    }, 100
-                );
-            }
-        }
+           let print_text = function (text, result, delay) {
+               if (text.length > 0) {
+                   result.innerHTML += text[0];
+                   setTimeout(
+                       function () {
+                           print_text(text.slice(1), result, 100);
+                       }, 100
+                   );
+               }
+           }
 
-        setInterval(print_text(text, result, 100), 2000);
-    });*/
+           setInterval(print_text(text, result, 100), 2000);
+       });*/
 
     let toTop = document.querySelector('.to-top'),
         modal = document.querySelector('.show-more-content.sleep'),
@@ -125,7 +118,11 @@
     let addToCart = (target) => {
         data.map(item => {
             if (target.getAttribute('data-attribute-id') == item.attribute_id) {
+                document.querySelector('.order__success').classList.remove('active');
+                document.querySelector('input[name="product"]').setAttribute('value', item.name);
+                document.querySelector('input[name="price"]').setAttribute('value', item.price);
                 orderWrapper.classList.add('active');
+                document.querySelector('.order__form').classList.add('active');
             }
         });
     }
@@ -148,3 +145,10 @@
     });
 
 })();
+
+$('.scrollTo').click(function () {
+    $('html, body').animate({
+        scrollTop: $($(this).attr('href')).offset().top - 500
+    }, 500);
+    return false;
+});

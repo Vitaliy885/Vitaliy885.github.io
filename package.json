@@ -25,6 +25,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "gulp-open": "^3.0.1",
-    "gulp-rename": "^1.4.0"
+    "gulp-rename": "^1.4.0",
+    "gulp-update": "^0.0.2"
   }
 }

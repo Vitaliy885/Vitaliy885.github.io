@@ -44,19 +44,19 @@
                      id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link scrollTo" href="#catalog">Каталог</a>
+                            <a class="nav-link" href="#catalog">Каталог</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link scrollTo" href="#new">Новинки</a>
+                            <a class="nav-link" href="#new">Новинки</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link scrollTo" href="#about">Про товар</a>
+                            <a class="nav-link" href="#about">Про товар</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link scrollTo contact" href="#contact">Як замовити</a>
+                            <a class="nav-link contact" href="#contact">Як замовити</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link scrollTo" href="#payment_delivery">Оплата/Доставка</a>
+                            <a class="nav-link" href="#payment_delivery">Оплата/Доставка</a>
                         </li>
                     </ul>
                 </div>
@@ -341,19 +341,19 @@
                     <div class="collapse footer-container navbar-collapse nav col-md-6 col-md-auto mb-2 justify-content-end mb-md-0">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link scrollTo active" href="#catalog">Каталог</a>
+                                <a class="nav-link active" href="#catalog">Каталог</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link scrollTo" href="#new">Новинки</a>
+                                <a class="nav-link" href="#new">Новинки</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link scrollTo" href="#about">Про товар</a>
+                                <a class="nav-link" href="#about">Про товар</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link scrollTo contact" href="#contact">Як замовити</a>
+                                <a class="nav-link contact" href="#contact">Як замовити</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link scrollTo" href="#payment_delivery">Оплата/Доставка</a>
+                                <a class="nav-link" href="#payment_delivery">Оплата/Доставка</a>
                             </li>
                         </ul>
                     </div>
@@ -390,11 +390,19 @@
 
 <div class="order__wrapper">
     <div class="order-close"></div>
-    <form action="#" class="order__form">
-        <input type="text" class="input__field" required placeholder="Ім'я">
-        <input type="text" value="+380(" class="input__field format__number" required placeholder="Телефон">
+    <form id="order" class="order__form active">
+        <input type="text" name="name" class="input__field" required placeholder="Ім'я">
+        <input type="text" name="phone" value="+380(" class="input__field format__number" required
+               placeholder="Телефон">
+        <input type="text" hidden name="product" value="">
+        <input type="text" hidden name="price" value="">
         <button class="submit__order">Замовити</button>
     </form>
+    <div class="order__success">
+         <span class="order__success-title">
+        заявку успішно надіслана! очікуйте дзвінка.
+    </span>
+    </div>
 </div>
 
 <div class="overlay"></div>
