@@ -1348,6 +1348,41 @@
 
       &-description {
         margin-top: 10px;
+
+        ul {
+          list-style-type: none;
+          margin-left: -30px;
+
+          li {
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+
+            &::after {
+              position: absolute;
+              content: '';
+              display: block;
+              width: 100%;
+              border-bottom: 1px dotted #000;
+              left: 0;
+              bottom: 6px;
+              z-index: -1;
+            }
+
+            .product-type {
+              font-weight: 600;
+              display: block;
+              background-color: #ffffff;
+              padding-right: 3px;
+            }
+
+            .product-value {
+              display: block;
+              padding-left: 3px;
+              background-color: #ffffff;
+            }
+          }
+        }
       }
 
       &-price {
