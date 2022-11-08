@@ -1329,6 +1329,7 @@
         height: 100px;
         margin: 5px;
         border: 1px solid #ededed;
+        object-fit: cover;
 
         @media (max-width: 767px) {
           width: 80px;
